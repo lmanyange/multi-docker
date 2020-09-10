@@ -13,7 +13,7 @@ after_success:
   - docker build -t lmanyange/multi-nginx ./nginx
   - docker build -t lmanyange/multi-server ./server
   - docker build -t lmanyange/multi-worker ./worker
-  # Login to Docker CLI
+  # Login to Docker CLI -- updated the username and password in travis
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Push images to docker hub
   - docker push lmanyange/multi-client
